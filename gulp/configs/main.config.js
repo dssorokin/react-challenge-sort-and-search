@@ -1,7 +1,7 @@
 module.exports = {
   paths: {
     sass: './sass/**/*.scss',
-    entry: './js/index.js',
+    entry: './js/index.jsx',
     js: './js/**/*.js',
     html: './*.html',
     dist: './public',
