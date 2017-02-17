@@ -5,7 +5,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers';
 import SortSearchApp from './App';
-import * as actions from './actions/loadPersonsAction';
+import * as actions from './actions/actions';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 

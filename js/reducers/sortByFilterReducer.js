@@ -1,14 +1,14 @@
 const initialState = () => {
   return {
-    sortFilter: 'BY_NAME'
+    sortType: 'BY_NAME'
   };
 }
 
 export default function sortByFilterReducer(state = initialState(), action) {
   switch (action.type) {
-    case 'SET_SORT_FILTER':
+    case 'SET_SORT_TYPE':
       return {
-        sortFilter: action.filter
+        sortType: action.filter
       }
     default:
       return state;

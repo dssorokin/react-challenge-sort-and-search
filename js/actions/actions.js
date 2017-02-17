@@ -12,6 +12,13 @@ export function addPersonsAction(persons) {
   };
 }
 
+export function setSortType(sortType) {
+  return {
+    type: 'SET_SORT_TYPE',
+    sortType
+  }
+}
+
 export function loadPersonsAction() {
   return (dispatch, getState) => {
     dispatch(loadingChangedAction(true));
