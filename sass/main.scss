@@ -23,3 +23,30 @@
   font-size: 2rem;
   color: #ccc;
 }
+
+.app {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.personsTable {
+  tbody > tr {
+    cursor: pointer;
+
+
+    &:hover {
+      background: #bfbfbf;
+    }
+  }
+}
+
+.personCard {
+  $props: image name age phone phrase;
+  width: 300px;
+
+  @each $prop in $props {
+    &__#{$prop} {
+      text-align: center;
+    }
+  }
+}

@@ -6,6 +6,7 @@
   "rules": {
     "comma-dangle": ["error", {
       "functions": "never"
-    }]
+    }],
+    "linebreak-style": "off"
   }
 }

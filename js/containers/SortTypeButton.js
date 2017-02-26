@@ -1,22 +1,23 @@
 import { connect } from 'react-redux';
 import Button from '../components/Button';
-import { setSortType } from '../actions/actions';
+import { setSortType, setCurrentPerson } from '../actions/actions';
+import { getSortedPersonsList } from './SortedPersonsList';
 
 function mapStateToProps(state, ownProps) {
-	return {
-		active: state.sortFilter === ownProps.filter
-	};
+  return {
+    active: state.sortFilter === ownProps.filter
+  };
 }
 
 function mapDispatchToProps(dispatch, ownProps) {
-	return {
-		onClick: () => {
-			dispatch(setSortType(ownProps.filter));
-		}
-	}
+  return {
+    onClick: () => {
+      dispatch(setSortType(ownProps.filter));
+    }
+  };
 }
 
 export default connect(
-	mapStateToProps,
-	mapDispatchToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(Button);

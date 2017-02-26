@@ -12,11 +12,25 @@ export function addPersonsAction(persons) {
   };
 }
 
-export function setSortType(sortType) {
+export function setSortType(filter) {
   return {
     type: 'SET_SORT_TYPE',
-    sortType
-  }
+    filter
+  };
+}
+
+export function setCurrentPerson(person) {
+  return {
+    type: 'SET_CURRENT_PERSON',
+    person
+  };
+}
+
+export function searchPersonAction(name) {
+  return {
+    type: 'SET_SEARCH_STRING',
+    name
+  };
 }
 
 export function loadPersonsAction() {
@@ -27,6 +41,8 @@ export function loadPersonsAction() {
         dispatch(loadingChangedAction(false));
         return res.json();
       })
-      .then(res => dispatch(addPersonsAction(res)));
+      .then(res => {
+        dispatch(addPersonsAction(res));
+      });
   };
 }

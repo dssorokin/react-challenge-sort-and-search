@@ -15,5 +15,5 @@ render(
   </Provider>,
   document.getElementById('root')
 );
-console.log('asdf');
+
 store.dispatch(actions.loadPersonsAction());

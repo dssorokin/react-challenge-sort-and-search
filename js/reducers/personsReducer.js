@@ -1,7 +1,8 @@
 const initialState = () => {
   return {
     items: [],
-    isLoading: false
+    isLoading: false,
+    searchString: ''
   };
 }
 
@@ -11,13 +12,17 @@ export default function PersonsReducer(state = initialState(), action) {
       return Object.assign({
         isLoading: action.status
       }, state);
-      break;
     case 'ADD_ITEMS':
       return {
         items: action.items,
-        isLoading: state.isLoading
+        isLoading: state.isLoading,
+        searchString: state.searchString
       };
-      break;
+    case 'SET_SEARCH_STRING':
+      return {
+        ...state,
+        searchString: action.name
+      };
     default:
       return state;
   }
